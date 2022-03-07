@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static './styles.css' %}"/>
+</head>
+<body>
+
+
+<div class="logout">
+    {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">Выход</a>
+</div>
+
+
+{% endif %}
+<div class="main">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

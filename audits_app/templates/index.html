@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="index">
+    <a class="big_button" href="{% url 'create_audit' %}">Создать аудит</a>
+    <a class="big_button" href="{% url 'list_of_audits' %}">Список аудитов</a>
+</div>
+{% endblock content %}

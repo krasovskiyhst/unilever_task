@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <table width=100%>
+        <tr>
+            <th>№</th>
+            <th>Исполнитель</th>
+            <th>Дата</th>
+            <th>Зона</th>
+            <th>Риск</th>
+            <th>Значение</th>
+            <th>Редактировать</th>
+        </tr>
+        {% for audit in audits %}
+        <tr>
+            <td>{{ audit.id }}</td>
+            <td>{{ audit.performer.last_name }}</td>
+            <td>{{ audit.date_added }}</td>
+            <td>{{ audit.audit_zone }}</td>
+            <td>{{ audit.type_of_risk }}</td>
+            <td>{{ audit.level_of_risk }}</td>
+            <td><a href="{% url 'edit_audit' audit.id %}">Редактировать</a></td>
+        </tr>
+        {% empty %}
+    </table>
+    {% endfor %}
+{% endblock content %}

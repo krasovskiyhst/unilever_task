@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<p>
+    <label>Исполнитель:</label>
+    <label>{{ request.user.last_name }}</label>
+</p>
+<form action="{% url 'create_audit' %}" method='post'>
+
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="big_button" name="submit">Подтвердить</button>
+</form>
+{% endblock content %}

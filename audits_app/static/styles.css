@@ -1,0 +1,83 @@
+body{
+    background-color: #4472c4;
+    font-family: Calibri;
+}
+a, button, label, input, select{
+    font-size: 26px;
+    color: #222222db;
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+.index{
+    width: 600px;
+}
+.big_button{
+    padding: 40px 160px;
+    background: #ed7d31;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #264c91;
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.logout{
+    float: right;
+    padding: 0 30px;
+}
+.logout a{
+    color: white;
+}
+
+input, select{
+    outline: 0;
+    border:1px solid #ccc;
+    height:60px;
+    width:49%;
+    margin: 10px 0;
+    text-align: center;
+}
+label{
+    float: left;
+    border:1px solid #ccc;
+    height:46px;
+    width:49%;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    padding-top: 16px;
+}
+
+/* Подсказки при наведении на поля регистрацииname="password1" */
+.field span{
+    display: none;
+}
+.field:hover span {
+    display: inline-block;
+    position: absolute;
+    background: #ed7d31;
+    padding: 30px;
+    margin: 10px 20px;
+}
+
+.field + ul{
+    display: none;
+}
+.field:hover + ul {
+    display: inline-block;
+    position: absolute;
+    background: #ed7d31;
+    padding: 30px;
+    margin: 10px 20px;
+    text-align: left;
+    left: 590px;
+    top: 300px;
+}
