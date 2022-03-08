@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<p>
-    <label>Исполнитель:</label>
-    <label>{{ request.user.last_name }}</label>
-</p>
-<form action="{% url 'edit_audit' audit.id %}" method='post'>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button name="submit">Подтвердить</button>
-</form>
+<div class="main">
+    <p>
+        <label>Исполнитель:</label>
+        <label class="last_name">{{ request.user.last_name }}</label>
+    </p>
+    <form action="{% url 'edit_audit' audit.id %}" method='post'>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="small_button submit" name="submit">Подтвердить</button>
+    </form>
+</div>
 {% endblock content %}

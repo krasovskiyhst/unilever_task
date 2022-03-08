@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <table width=100%>
+    <table>
         <tr>
             <th>№</th>
             <th>Исполнитель</th>
@@ -14,11 +14,12 @@
         <tr>
             <td>{{ audit.id }}</td>
             <td>{{ audit.performer.last_name }}</td>
-            <td>{{ audit.date_added }}</td>
+            <td>{{ audit.date_added|date:"d.m.Y" }}</td>
             <td>{{ audit.audit_zone }}</td>
             <td>{{ audit.type_of_risk }}</td>
-            <td>{{ audit.level_of_risk }}</td>
-            <td><a href="{% url 'edit_audit' audit.id %}">Редактировать</a></td>
+            <td class="{{audit.level_of_risk}}">{{ audit.level_of_risk }}</td>
+            <td><a href="{% url 'edit_audit' audit.id %}"><img src="/static/image/pen.png"></a></td>
+
         </tr>
         {% empty %}
     </table>

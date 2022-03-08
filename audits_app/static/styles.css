@@ -2,9 +2,9 @@ body{
     background-color: #4472c4;
     font-family: Calibri;
 }
-a, button, label, input, select{
+a, button, label, input, select, tr{
     font-size: 26px;
-    color: #222222db;
+    color: #222222;
 }
 
 .main{
@@ -13,10 +13,18 @@ a, button, label, input, select{
     left: 50%;
     transform:translate(-50%, -50%);
     text-align: center;
+    min-width: 600px;
 }
+.header{
+    width: 100%;
+    height: 60px;
+}
+
 .index{
     width: 600px;
 }
+
+
 .big_button{
     padding: 40px 160px;
     background: #ed7d31;
@@ -29,6 +37,23 @@ a, button, label, input, select{
     cursor: pointer;
     box-sizing: border-box;
 }
+.small_button{
+    width: 220px;
+    height: 45px;
+    background: #bdd7ee;
+    text-decoration: none;
+    border: 1px solid #2f528f;
+    display: block;
+    margin: 20px auto;
+    padding: 4px 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    float: left;
+}
+.submit{
+    float: right;
+}
+
 
 .logout{
     float: right;
@@ -40,23 +65,32 @@ a, button, label, input, select{
 
 input, select{
     outline: 0;
-    border:1px solid #ccc;
+    border:1px solid #2f528f;
     height:60px;
-    width:49%;
+    width:48%;
     margin: 10px 0;
     text-align: center;
+    float: right;
+}
+select{
+    height: 64px;
+    width: 49%;
+}
+.last_name{
+    float: right;
 }
 label{
     float: left;
-    border:1px solid #ccc;
+    border:1px solid #2f528f;
     height:46px;
-    width:49%;
-    margin: 10px 0px 10px 0px;
+    width:48.5%;
+    margin: 10px 0px;
     text-align: center;
     padding-top: 16px;
+    background: white;
 }
 
-/* Подсказки при наведении на поля регистрацииname="password1" */
+/* Подсказки при наведении на поля регистрации */
 .field span{
     display: none;
 }
@@ -80,4 +114,39 @@ label{
     text-align: left;
     left: 590px;
     top: 300px;
+}
+
+/* Таблица */
+table{
+    border-spacing: 2px;
+    background-color: white;
+    width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+tr:nth-child(odd){
+    background:#e9ebf5;
+}
+tr:nth-child(even){
+    background:#cfd5ea;
+}
+tr{
+    height: 40px;
+}
+th{
+    padding: 10px 50px;
+    background: #4472c4;
+    color: white;
+}
+
+/* Условное форматирование.  */
+.Высокий{
+    background:#ff0000;
+}
+.Низкий{
+    background: #92d050;
+}
+.Средний{
+    background: #eac602;
 }
