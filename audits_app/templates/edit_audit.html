@@ -8,6 +8,7 @@
     <form action="{% url 'edit_audit' audit.id %}" method='post'>
         {% csrf_token %}
         {{ form.as_p }}
+        <a class="small_button" href="{% url 'index' %}">Назад</a>
         <button class="small_button submit" name="submit">Подтвердить</button>
     </form>
 </div>

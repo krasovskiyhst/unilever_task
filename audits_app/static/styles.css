@@ -1,6 +1,7 @@
 body{
     background-color: #4472c4;
     font-family: Calibri;
+    text-align: center;
 }
 a, button, label, input, select, tr{
     font-size: 26px;
@@ -12,7 +13,6 @@ a, button, label, input, select, tr{
     top: 50%;
     left: 50%;
     transform:translate(-50%, -50%);
-    text-align: center;
     min-width: 600px;
 }
 .header{
@@ -116,13 +116,16 @@ label{
     top: 300px;
 }
 
+
 /* Таблица */
 table{
     border-spacing: 2px;
     background-color: white;
     width: 850px;
     margin: auto;
-    text-align: center;
+}
+td{
+    padding: 0 10px;
 }
 
 tr:nth-child(odd){
@@ -140,13 +143,13 @@ th{
     color: white;
 }
 
-/* Условное форматирование.  */
-.Высокий{
-    background:#ff0000;
-}
+/* Условное форматирование. Надеюсь не побьют */
 .Низкий{
     background: #92d050;
 }
 .Средний{
     background: #eac602;
+}
+.Высокий{
+    background: #ff0000;
 }
